@@ -1,18 +1,21 @@
 {
   "name": "ens",
+  "version": "0.1.0",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ ens",
-    "create-local": "graph create --node http://localhost:8020/ ens",
-    "remove-local": "graph remove --node http://localhost:8020/ ens",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 ens",
-    "test": "graph test"
+    "deploy-chainbase": "graph deploy --node https://api.chainbase.online/v1/subgraph/u81c71f57/deploy --ipfs https://api.chainbase.online/v1/subgraph/u81c71f57/ipfs ens",
+    "deploy-thegraph": "graph deploy --product hosted-service kiv1n/identity-space-ens",
+    "create-local": "graph create --node http://localhost:8020/ identity-space-ens",
+    "remove-local": "graph remove --node http://localhost:8020/ identity-space-ens",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 identity-space-ens"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.60.0",
     "@graphprotocol/graph-ts": "0.30.0"
   },
-  "devDependencies": { "matchstick-as": "0.5.0" }
+  "devDependencies": {
+    "matchstick-as": "0.5.0"
+  }
 }

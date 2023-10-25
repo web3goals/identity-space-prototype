@@ -5,7 +5,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy-chainbase": "graph deploy --node https://api.chainbase.online/v1/subgraph/u81c71f57/deploy --ipfs https://api.chainbase.online/v1/subgraph/u81c71f57/ipfs ens",
+    "deploy-chainbase": "graph deploy --node https://api.chainbase.online/v1/subgraph/u81c71f57/deploy --ipfs https://api.chainbase.online/v1/subgraph/u81c71f57/ipfs identity-space-ens",
     "deploy-thegraph": "graph deploy --product hosted-service kiv1n/identity-space-ens",
     "create-local": "graph create --node http://localhost:8020/ identity-space-ens",
     "remove-local": "graph remove --node http://localhost:8020/ identity-space-ens",

@@ -56,7 +56,7 @@ export default function Identity() {
               <IdentityCard identity={identity} key={index} />
             )}
             noEntitiesText="😐 no identities"
-            sx={{ mt: 4 }}
+            sx={{ mt: 2 }}
           />
           <WarningCard sx={{ mt: 2 }} />
         </>

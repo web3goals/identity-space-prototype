@@ -15,6 +15,9 @@ export async function findIdentitiesByFragment(
   if (fragment && fragment.endsWith(".lens")) {
     return findIdentitiesByLens(fragment);
   }
+  if (fragment && fragment.endsWith(".fcast.id")) {
+    // TODO:
+  }
   throw new Error("Fragment is not supported");
 }
 

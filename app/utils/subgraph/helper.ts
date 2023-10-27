@@ -12,7 +12,7 @@ export async function makeSubgraphQuery(
     return response.data.data;
   } catch (error: any) {
     throw new Error(
-      `Could not query the subgraph: ${JSON.stringify(error.message)}`
+      `Could not query the subgraph "${url}": ${JSON.stringify(error.message)}`
     );
   }
 }

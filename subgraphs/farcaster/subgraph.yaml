@@ -14,41 +14,11 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - ChangeRecoveryAddress
-        - DisableTrustedOnly
-        - EIP712DomainChanged
-        - OwnershipTransferStarted
-        - OwnershipTransferred
-        - Paused
-        - Recover
         - Register
-        - SetTrustedCaller
-        - Transfer
-        - Unpaused
       abis:
         - name: IdRegistry
           file: ./abis/IdRegistry.json
       eventHandlers:
-        - event: ChangeRecoveryAddress(indexed uint256,indexed address)
-          handler: handleChangeRecoveryAddress
-        - event: DisableTrustedOnly()
-          handler: handleDisableTrustedOnly
-        - event: EIP712DomainChanged()
-          handler: handleEIP712DomainChanged
-        - event: OwnershipTransferStarted(indexed address,indexed address)
-          handler: handleOwnershipTransferStarted
-        - event: OwnershipTransferred(indexed address,indexed address)
-          handler: handleOwnershipTransferred
-        - event: Paused(address)
-          handler: handlePaused
-        - event: Recover(indexed address,indexed address,indexed uint256)
-          handler: handleRecover
         - event: Register(indexed address,indexed uint256,address)
           handler: handleRegister
-        - event: SetTrustedCaller(indexed address,indexed address,address)
-          handler: handleSetTrustedCaller
-        - event: Transfer(indexed address,indexed address,indexed uint256)
-          handler: handleTransfer
-        - event: Unpaused(address)
-          handler: handleUnpaused
-      file: ./src/id-registry.ts
+      file: ./src/idRegistry.ts

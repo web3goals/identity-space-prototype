@@ -1,18 +1,21 @@
 {
-  "name": "identity-space-farcaster",
+  "name": "farcaster",
+  "version": "0.1.0",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ kiv1n/identity-space-farcaster",
-    "create-local": "graph create --node http://localhost:8020/ kiv1n/identity-space-farcaster",
-    "remove-local": "graph remove --node http://localhost:8020/ kiv1n/identity-space-farcaster",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 kiv1n/identity-space-farcaster",
-    "test": "graph test"
+    "deploy-chainbase": "graph deploy --node https://api.chainbase.online/v1/subgraph/u81c71f57/deploy --ipfs https://api.chainbase.online/v1/subgraph/u81c71f57/ipfs identity-space-farcaster",
+    "deploy-thegraph": "graph deploy --product hosted-service kiv1n/identity-space-farcaster",
+    "create-local": "graph create --node http://localhost:8020/ identity-space-farcaster",
+    "remove-local": "graph remove --node http://localhost:8020/ identity-space-farcaster",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 identity-space-farcaster"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.60.0",
     "@graphprotocol/graph-ts": "0.30.0"
   },
-  "devDependencies": { "matchstick-as": "0.5.0" }
+  "devDependencies": {
+    "matchstick-as": "0.5.0"
+  }
 }

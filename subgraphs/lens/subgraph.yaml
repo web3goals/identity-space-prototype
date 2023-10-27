@@ -14,17 +14,11 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - AdminChanged
-        - BeaconUpgraded
-        - Upgraded
+        - ProfileCreated
       abis:
         - name: LensHub
           file: ./abis/LensHub.json
       eventHandlers:
-        - event: AdminChanged(address,address)
-          handler: handleAdminChanged
-        - event: BeaconUpgraded(indexed address)
-          handler: handleBeaconUpgraded
-        - event: Upgraded(indexed address)
-          handler: handleUpgraded
-      file: ./src/lens-hub.ts
+        - event: ProfileCreated(indexed uint256,indexed address,indexed address,string,string,address,bytes,string,uint256)
+          handler: handleProfileCreated
+      file: ./src/lensHub.ts

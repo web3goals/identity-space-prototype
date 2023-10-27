@@ -1,6 +1,8 @@
 import { Identity } from "@/types/identity";
 import { ethers } from "ethers";
+import { getFarcasterOwnerAddress } from "./farcaster";
 import { findAddressByEns, findEnsIdentities } from "./subgraph/ens";
+import { findFarcasterIdentities } from "./subgraph/farcaster";
 import { findAddressByLens, findLensIdentities } from "./subgraph/lens";
 
 export async function findIdentitiesByFragment(
@@ -16,7 +18,7 @@ export async function findIdentitiesByFragment(
     return findIdentitiesByLens(fragment);
   }
   if (fragment && fragment.endsWith(".fcast.id")) {
-    // TODO:
+    return findIdentitiesByFarcaster(fragment);
   }
   throw new Error("Fragment is not supported");
 }
@@ -32,7 +34,13 @@ async function findIdentitiesByAddress(address?: string): Promise<Identity[]> {
   };
   const ensIdentities = await findEnsIdentities(address);
   const lensIdentities = await findLensIdentities(address);
-  return [ethIdentity, ...ensIdentities, ...lensIdentities];
+  const farcasterIdentities = await findFarcasterIdentities(address);
+  return [
+    ethIdentity,
+    ...ensIdentities,
+    ...lensIdentities,
+    ...farcasterIdentities,
+  ];
 }
 
 async function findIdentitiesByEns(ens: string): Promise<Identity[]> {
@@ -42,5 +50,15 @@ async function findIdentitiesByEns(ens: string): Promise<Identity[]> {
 
 async function findIdentitiesByLens(lens: string): Promise<Identity[]> {
   const address = await findAddressByLens(lens);
+  return findIdentitiesByAddress(address);
+}
+
+async function findIdentitiesByFarcaster(
+  farcaster: string
+): Promise<Identity[]> {
+  const address = await getFarcasterOwnerAddress(farcaster);
+  if (!address) {
+    return [];
+  }
   return findIdentitiesByAddress(address);
 }

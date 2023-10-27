@@ -85,7 +85,6 @@ function SearchForm() {
       initialValues={formValues}
       validationSchema={formValidationSchema}
       onSubmit={() => {
-        console.log("here");
         router.push(`/identities/${formValues.identity}`);
       }}
     >
@@ -118,11 +117,12 @@ function SearchForm() {
             </LargeLoadingButton>
             <LargeLoadingButton
               variant="outlined"
-              onClick={() =>
+              onClick={() => {
+                // TODO: Use random addresses
                 router.push(
                   "/identities/0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-                )
-              }
+                );
+              }}
             >
               🍀 I&apos;m Feeling Lucky
             </LargeLoadingButton>

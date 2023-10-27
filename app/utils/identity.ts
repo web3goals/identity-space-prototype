@@ -20,7 +20,7 @@ export async function findIdentitiesByFragment(
   if (fragment && fragment.endsWith(".fcast.id")) {
     return findIdentitiesByFarcaster(fragment);
   }
-  throw new Error("Fragment is not supported");
+  return [];
 }
 
 async function findIdentitiesByAddress(address?: string): Promise<Identity[]> {

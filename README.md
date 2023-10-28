@@ -14,12 +14,22 @@ It's also an API that can be used to integrate identities into your web or mobil
 
 ## 🔨 How it's made
 
-...
+To create this project, I used:
+
+Chainbase infrastructure to build subgraphs that index data from ENS, Lens Protocol, Farcaster so that the application can build a unified account identity.
 
 ## 🔮 Plans
 
-...
+There are many ideas on how to improve this project.
+
+It would be great to:
+
+- Add integration with other web3 protocols such as POAP or Guild.
+
+- Implement a protocol that lets people own and control their identity, and link it to web2 services such as Twitter or Discord.
+
+- Add metadata to API responses and create SDK for web and mobile applications.
 
 ## 🏗️ Architecture
 
-...
+![Architecture](/architecture.png)

@@ -10,7 +10,7 @@ import useError from "@/hooks/useError";
 import useToasts from "@/hooks/useToast";
 import { Identity as IdentityType } from "@/types/identity";
 import { emojiAvatarForAddress } from "@/utils/avatars";
-import { addressToShortAddress } from "@/utils/converters";
+import { addressToShortAddress, ensToShortEns } from "@/utils/converters";
 import {
   Avatar,
   Box,
@@ -211,7 +211,9 @@ function IdentityCardFooterEns(props: {
 
   return (
     <Box sx={{ ...props.sx }}>
-      <Typography color="text.secondary">{props.identity.identity}</Typography>
+      <Typography color="text.secondary">
+        {ensToShortEns(props.identity.identity)}
+      </Typography>
       <Stack direction="row" spacing={1} mt={1}>
         <MediumLoadingButton
           href={`https://app.ens.domains/${props.identity.identity}`}
@@ -343,9 +345,9 @@ function WarningCard(props: { sx?: SxProps }) {
           🔗 0xd8da...6045
         </MuiLink>
       </Link>
-      <Link href="/identities/vitalik.ens" passHref legacyBehavior>
+      <Link href="/identities/vitalik.eth" passHref legacyBehavior>
         <MuiLink variant="body2" fontWeight={700} mt={1}>
-          🔗 vitalik.ens
+          🔗 vitalik.eth
         </MuiLink>
       </Link>
       <Link href="/identities/vitalik.lens" passHref legacyBehavior>

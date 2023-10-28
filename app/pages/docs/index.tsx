@@ -90,9 +90,9 @@ export default function Landing() {
         </Stack>
         <Stack direction="row" alignItems="center" spacing={1} mt={1}>
           <Chip label="ENS" />
-          <Typography color="text.secondary">/identity/vitalik.ens</Typography>
+          <Typography color="text.secondary">/identity/vitalik.eth</Typography>
           <MuiLink
-            href={`${apiUrl}/identity/vitalik.ens`}
+            href={`${apiUrl}/identity/vitalik.eth`}
             target="_blank"
             fontSize={18}
           >
@@ -148,7 +148,7 @@ export default function Landing() {
                 },
                 {
                   address: "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-                  identity: "vitalik.ens",
+                  identity: "vitalik.eth",
                   platform: "ENS",
                 },
                 {

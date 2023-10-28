@@ -84,7 +84,7 @@ function SearchForm() {
   function redirectToRandomIdentity() {
     const identities = [
       "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-      "vitalik.ens",
+      "vitalik.eth",
       "vitalik.lens",
       "vitalik.fcast.id",
     ];

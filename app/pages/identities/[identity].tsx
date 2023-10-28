@@ -335,27 +335,27 @@ function WarningCard(props: { sx?: SxProps }) {
         available, but you can test this application at the following links:
       </Typography>
       <Link
-        href="/identities/0x02cf1f342a8361a6e5c39d22ce9a4257e4d210f8"
+        href="/identities/0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
         passHref
         legacyBehavior
       >
         <MuiLink variant="body2" fontWeight={700} mt={2}>
-          🔗 0x02cf...10f8
+          🔗 0xd8da...6045
         </MuiLink>
       </Link>
-      <Link href="/identities/7october.eth" passHref legacyBehavior>
+      <Link href="/identities/vitalik.ens" passHref legacyBehavior>
         <MuiLink variant="body2" fontWeight={700} mt={1}>
-          🔗 7october.eth
+          🔗 vitalik.ens
         </MuiLink>
       </Link>
-      <Link href="/identities/isabellayz.lens" passHref legacyBehavior>
+      <Link href="/identities/vitalik.lens" passHref legacyBehavior>
         <MuiLink variant="body2" fontWeight={700} mt={1}>
-          🔗 isabellayz.lens
+          🔗 vitalik.lens
         </MuiLink>
       </Link>
-      <Link href="/identities/kkafh.fcast.id" passHref legacyBehavior>
+      <Link href="/identities/vitalik.fcast.id" passHref legacyBehavior>
         <MuiLink variant="body2" fontWeight={700} mt={1}>
-          🔗 kkafh.fcast.id
+          🔗 vitalik.fcast.id
         </MuiLink>
       </Link>
     </Box>

@@ -5,6 +5,8 @@ import { Typography, Link as MuiLink, Box, Chip, Stack } from "@mui/material";
  * Landing page.
  */
 export default function Landing() {
+  const apiUrl = "https://identity-space.vercel.app/api";
+
   return (
     <Layout maxWidth="md">
       <Typography variant="h4" fontWeight={700}>
@@ -53,7 +55,7 @@ export default function Landing() {
           </Typography>
         </Box>
         <Typography ml={0.5}>
-          https://identity-space.vercel.app/api
+          {apiUrl}
           <strong>/identity/&#123;fragment&#125;</strong>
         </Typography>
       </Box>
@@ -78,20 +80,48 @@ export default function Landing() {
           <Typography color="text.secondary">
             /identity/0xd8da6bf26964af9d7eed9e03e53415d37aa96045
           </Typography>
+          <MuiLink
+            href={`${apiUrl}/identity/0xd8da6bf26964af9d7eed9e03e53415d37aa96045`}
+            target="_blank"
+            fontSize={18}
+          >
+            🔗
+          </MuiLink>
         </Stack>
         <Stack direction="row" alignItems="center" spacing={1} mt={1}>
           <Chip label="ENS" />
           <Typography color="text.secondary">/identity/vitalik.ens</Typography>
+          <MuiLink
+            href={`${apiUrl}/identity/vitalik.ens`}
+            target="_blank"
+            fontSize={18}
+          >
+            🔗
+          </MuiLink>
         </Stack>
         <Stack direction="row" alignItems="center" spacing={1} mt={1}>
           <Chip label="Lens" />
           <Typography color="text.secondary">/identity/vitalik.lens</Typography>
+          <MuiLink
+            href={`${apiUrl}/identity/vitalik.lens`}
+            target="_blank"
+            fontSize={18}
+          >
+            🔗
+          </MuiLink>
         </Stack>
         <Stack direction="row" alignItems="center" spacing={1} mt={1}>
           <Chip label="Fragment" />
           <Typography color="text.secondary">
             /identity/vitalik.fcast.id
           </Typography>
+          <MuiLink
+            href={`${apiUrl}/identity/vitalik.fcast.id`}
+            target="_blank"
+            fontSize={18}
+          >
+            🔗
+          </MuiLink>
         </Stack>
       </Box>
       {/* Response */}

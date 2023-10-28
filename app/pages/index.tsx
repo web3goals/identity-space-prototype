@@ -83,12 +83,10 @@ function SearchForm() {
 
   function redirectToRandomIdentity() {
     const identities = [
-      "0x02cf1f342a8361a6e5c39d22ce9a4257e4d210f8",
-      "7october.eth",
-      "0xc16753c85897906369e6619f85ed78dc19c28f4f",
-      "isabellayz.lens",
-      "0xad6617c790830cf9aad36ddac764e6ca9db20c7e",
-      "kkafh.fcast.id",
+      "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+      "vitalik.ens",
+      "vitalik.lens",
+      "vitalik.fcast.id",
     ];
     router.push(`/identities/${shuffle(identities)[0]}`);
   }
